@@ -92,7 +92,7 @@ export async function findAllMarkets(
             if (
               (tx.transaction.message as Message).staticAccountKeys[
                 eventAuthorityKey
-              ].toString() !== eventAuthority.toString() ||
+              ]?.toString() !== eventAuthority.toString() ||
               (tx.transaction.message as Message).staticAccountKeys[
                 programKey
               ].toString() !== programId.toString()
